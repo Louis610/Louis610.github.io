@@ -22,15 +22,6 @@ layout: default
 {{ content }}
 
 
-{% assign aliases = page.aliases
-  | default: page.name
-  | default: page.title
-  | join: ","
-  | split: ","
-  | array_filter
-%}
-
-
 <p class="center">
   <a href="{{ site.baseurl }}/research/?search={{ page.name | uri_escape }}">
     Search for {{ page.name | default: page.title }}'s papers on the Research page
