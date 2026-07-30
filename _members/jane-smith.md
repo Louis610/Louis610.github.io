@@ -1,6 +1,6 @@
 ---
 name: Jane Smith
-image: images/photo.jpg
+image: /images/photo.jpg
 role: principal-investigator
 affiliation: University of Colorado
 aliases:
