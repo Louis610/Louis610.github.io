@@ -12,8 +12,8 @@
 <div class="portrait-wrapper">
   <a
     {% if page.slug != member.slug and member.url %}
-      href="{{ member.url | relative_url }}"
-{% endif %}
+      href="{{ member.url }}"
+    {% endif %}
     class="portrait"
     data-style="{{ include.style }}"
     aria-label="{{ member.name | default: "member link" | regex_strip }}"
