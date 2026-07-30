@@ -1,9 +1,15 @@
 {% if include.lookup %}
   {% assign citation = site.data.citations
-    | where_exp: "citation",
-      "citation.id == include.lookup or citation.title contains include.lookup"
+    | where: "id", include.lookup
     | first
   %}
+
+  {% unless citation %}
+    {% assign citation = site.data.citations
+      | where: "title", include.lookup
+      | first
+    %}
+  {% endunless %}
 {% else %}
   {% assign citation = include %}
 {% endif %}
